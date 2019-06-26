@@ -1,4 +1,5 @@
 import random
+import time
 
 class Fighter:
     def __init__ (self, name, health, mindamage, maxdamage):
@@ -44,12 +45,14 @@ def story(fighter1, fighter2):
         print("Nobody knows, why, but", fighter1.name, "and", fighter2.name, "start to fight!")  
         
 def rumble(fighter1, fighter2):
-    story(fighter1, fighter2)
+    story(fighter1, fighter2)    
     fighter1.start()
     fighter2.start()
     print("----------------------")
+    time.sleep(1)
     while fighter1.health > 0 and fighter2.health > -0:
         round(fighter1, fighter2)
+        time.sleep(1)
     victory(fighter1, fighter2)
 
 
